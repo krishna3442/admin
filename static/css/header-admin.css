@@ -1,0 +1,74 @@
+.user-login{
+padding: 30px;
+font-size: 20px;
+color: #948f8f;
+}
+.user-content{
+    background: black;
+}
+.name-input,.email-input{
+    
+        float: left;
+        padding: 10px;
+    
+}
+.search-input,.delete-input{
+    float: left;
+    padding: 10px; 
+   
+}
+.search{
+    cursor: pointer;
+    background: #017b8b;
+    border: none;
+    text-align: center;
+    color: white;
+    padding: 3px 40px 3px 40px;
+}
+.name,.email{
+    
+        width: 250px;
+    
+}
+.delete{
+    cursor: pointer;
+    background: red;
+    border: none;
+    text-align: center;
+    color: white;
+    padding:3px 40px 3px 40px;
+}
+.user-fields {
+    background: #888888;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    
+}
+.tab{
+    border: 2px solid #efefef;
+    background: #efefef;
+    overflow: auto;
+    text-align: center;
+}
+.user-enter{
+    color: #948f8f;
+    padding: 5px;
+    border: 2px solid;
+    text-align: center;
+}
+.img-delete,.img-view{
+    height:22px;
+    cursor: pointer;
+    margin-right: 7px;
+}
+.table{
+    color:#948f8f;
+}
+.head{
+    
+        background: #948f8f;
+        color: white;
+        border: none !important;
+    
+}

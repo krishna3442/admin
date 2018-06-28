@@ -1,0 +1,18 @@
+.user-name{
+    float: left;
+    padding: 10px;
+    font-size: 16px;
+    color: #948f8f;
+font-weight: bold;
+}
+.user-name-display
+{
+    padding: 10px;
+}
+.user-height{
+    height: 100px;
+   
+}
+.user-dis{
+    margin-top: 25px;
+}

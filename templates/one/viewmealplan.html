@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>HealthTech</title>
+ 
+  <link href="css/bootstrap.min.css"  rel="stylesheet">
+  <link href="css/header-admin.css" rel="stylesheet">
+  <link href="css/sb-admin.css" rel="stylesheet">
+   
+  <link href="css/useredit.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato:400,400i&amp;subset=latin-ext" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href='{% url "before_l:index" %}'><img src="img/logo-2.png"  width="140"></a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Smart Health Assessment">
+          <a class="nav-link" href='{% url "insurance:health_ana" %}'>
+            <i class="fa fa-fw fa-area-chart"></i>
+            <span class="nav-link-text">User Login Form Details</span>
+          </a>
+        </li>
+       
+         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Smart Preventive Measures">
+          <a class="nav-link" href='{% url "insurance:pre_meas" %}'>
+            <i class="fa fa-fw fa-sitemap"></i>
+            <span class="nav-link-text">Smart Preventive Measures</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Activites">
+          <a class="nav-link" href='{% url "insurance:activites" %}' >
+            <i class="fa fa-fw  fa-tasks"></i>
+            <span class="nav-link-text">Activites</span>
+          </a>
+
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Meal Plan">
+          <a class="nav-link"  href='{% url "insurance:fooddetails" %}' data-parent="#exampleAccordion">
+            <i class="fa fa-fw fa-cutlery"></i>
+            <span class="nav-link-text">Meal Plan</span>
+          </a>
+
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Appointments">
+          <a class="nav-link"  href='{% url "insurance:appointments" %}' data-parent="#exampleAccordion">
+            <i class="fa fa-fw fa-sitemap"></i>
+            <span class="nav-link-text">Appointments</span>
+          </a>
+
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Health Package">
+          <a class="nav-link"  href='{% url "old_site:cygenpacks" %}'  data-parent="#exampleAccordion">
+           <i class="fa fa-fw fa-heartbeat"></i>
+            <span class="nav-link-text">Scheduling</span>
+          </a>
+
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Insurance Plans">
+          <a class="nav-link"  href='{% url "insurance:insurance_packs" %}' data-parent="#exampleAccordion">
+            <i class="fa fa-fw fa-italic"></i>
+            <span class="nav-link-text">Payment</span>
+          </a>
+
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Hospital Packs">
+          <a class="nav-link"  href='{% url "healther:hospital_pack" %}' data-parent="#exampleAccordion">
+            <i class="fa  fa-fw fa-h-square"></i>
+            <span class="nav-link-text"></span>
+          </a>
+
+        </li>
+      </ul>
+      <ul class="navbar-nav sidenav-toggler">
+        <li class="nav-item">
+          <a class="nav-link text-center" id="sidenavToggler">
+
+          </a>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav ml-auto">
+             <li class="nav-item">
+                    <span class="username">Welcome Admin</span>
+            </li>
+                         <li>   <a  data-toggle="modal" data-target="#exampleModal" >
+                            <i class="fa fa-fw fa-sign-out"></i>Logout</a>
+                        </li>
+                    </ul>
+            </div>
+          </li>
+      </ul>
+    </div>
+</nav>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+            <a class="btn btn-primary" href='{% url "before_l:index" %}'>Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+ <div class="content-wrapper">
+     <div class="row">
+     <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="user-login">View Meal Plan</div>
+     </div>
+     <div class="col-md-10 offset-md-1 col-sm-10 offset-sm-2 col-xs-12 tab">
+        <div class="row">
+       <div class= "col-md-12 col-sm-12 col-xs-12 user-height">
+           <div class="row">
+           <div class="col-md-6 col-sm-6 col-xs-12 user-dis">
+               <div class="user-name">Name</div>
+               <div class="user-name-display"><input type="text" value="Name" class="usern"></div>
+           </div>
+           <div class="col-md-6 col-sm-6 col-xs-12 user-dis">
+                <div class="user-name">Email-Id</div>
+                <div class="user-name-display"><input type="text" value="Emailid" class="usern"></div>
+            </div>
+        </div>
+           </div>
+           <div class= "col-md-12 col-sm-12 col-xs-12 user-height">
+                <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12 user-dis">
+                    <div class="user-name">Calorie</div>
+                    <div class="user-name-display"><input type="text" value="Password" class="usern"></div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12 user-dis">
+                     <div class="user-name">Carb</div>
+                     <div class="user-name-display"><input type="text" value="Phone NO" class="usern"></div>
+                 </div>
+             </div>
+                </div>
+                <div class= "col-md-12 col-sm-12 col-xs-12 user-height">
+                        <div class="row">
+                        <div class="col-md-6 col-sm-6 col-xs-12 user-dis">
+                            <div class="user-name">Protiens</div>
+                            <div class="user-name-display"><input type="text" value="Password" class="usern"></div>
+                        </div>
+                       
+                     
+                        </div>
+                       
+           </div>
+           </div>
+   
+</div>
+</div>
+<script src= "js/bootstrap.bundle.min.js"></script>
+
+ 
+</body>
+</html>

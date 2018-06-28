@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Find easily a doctor and book online an appointment">
+	<meta name="author" content="Ansonika">
+	<title>CyGen - Find easily a doctor and book online an appointment</title>
+
+	<!-- Favicons-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link href="{% static "css1/bootstrap.min.css" %}" rel="stylesheet">
+	<link href="{% static "css1/style.css" %}" rel="stylesheet">
+    <link href="{% static "css1/datepicker.css" %}" rel="stylesheet">
+<style media="screen">
+
+</style>
+
+
+</head>
+
+<body>
+    <div class="content">
+	<div class="doctor" style="width:275px; height:800px; margin-left:50px;    border:1px solid #898B8E;   float: left;">
+
+	<img src="{% static "img/doctor.jpg" %}" width="273px" height="250px" alt="not found">
+	</div>
+	<div class="row add_bottom_45" style="width:800px; height:400px; margin-left:375px; margin-top:150px;   border:1px solid #898B8E;">
+
+
+		<div class="col-lg-7">
+
+			<div class="form-group">
+				<div id="calendar"></div>
+				<input type="hidden" id="my_hidden_input">
+				<ul class="legend">
+					<li><strong></strong>Available</li>
+					<li><strong></strong>Not available</li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-lg-5">
+			<ul class="time_select version_2 add_top_20">
+				<li>
+					<input type="radio" id="radio1" name="radio_time" value="09.30am" >
+					<label for="radio1">09.30am</label>
+				</li>
+				<li>
+					<input type="radio" id="radio2" name="radio_time" value="10.00am">
+					<label for="radio2">10.00am</label>
+				</li>
+				<li>
+					<input type="radio" id="radio3" name="radio_time" value="10.30am">
+					<label for="radio3">10.30am</label>
+				</li>
+				<li>
+					<input type="radio" id="radio4" name="radio_time" value="11.00am">
+					<label for="radio4">11.00am</label>
+				</li>
+				<li>
+					<input type="radio" id="radio5" name="radio_time" value="11.30am">
+					<label for="radio5">11.30am</label>
+				</li>
+				<li>
+					<input type="radio" id="radio6" name="radio_time" value="12.00am">
+					<label for="radio6">12.00am</label>
+				</li>
+				<li>
+					<input type="radio" id="radio7" name="radio_time" value="01.30pm">
+					<label for="radio7">01.30pm</label>
+				</li>
+				<li>
+					<input type="radio" id="radio8" name="radio_time" value="02.00pm">
+					<label for="radio8">02.00pm</label>
+				</li>
+				<li>
+					<input type="radio" id="radio9" name="radio_time" value="02.30pm">
+					<label for="radio9">02.30pm</label>
+				</li>
+				<li>
+					<input type="radio" id="radio10" name="radio_time" value="03.00pm">
+					<label for="radio10">03.00pm</label>
+				</li>
+				<li>
+					<input type="radio" id="radio11" name="radio_time" value="03.30pm">
+					<label for="radio11">03.30pm</label>
+				</li>
+				<li>
+					<input type="radio" id="radio12" name="radio_time" value="04.00pm">
+					<label for="radio12">04.00pm</label>
+				</li>
+			</ul>
+		</div>
+
+    <button type="button" name="button"style="margin-left:325px; margin-bottom:10px; border-radius:20px; height:40px; width:150px ;background-color:#017b8b; color:white;" onclick="location.href='{% url 'one:booking' %}'">Book Now</button>
+	</div>
+
+
+	</div>
+
+
+
+	<script src="{% static "js1/jquery-2.2.4.min.js" %}"></script>
+
+    <script src="{% static "js1/bootstrap-datepicker.js" %}"></script>
+    <script>
+			$('#calendar').datepicker({
+			    todayHighlight: true,
+				daysOfWeekDisabled: [0],
+				weekStart: 1,
+			    format: "yyyy-mm-dd",
+    			datesDisabled: ["2017/10/20", "2017/11/21","2017/12/21", "2018/01/21","2018/02/21","2018/03/21"],
+			});
+	</script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <h1>Delete {{user1.name }}?</h1>
+
+    <form method="post">
+      {% csrf_token %}
+      <input type="submit" value="Delete">
+      <a href="{% url 'one:detail' pk=user1.pk%} ">Cancel</a>
+
+    </form>
+
+  </body>
+</html>

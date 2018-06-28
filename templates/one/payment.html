@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>HealthTech</title>
+ 
+  <link href="css/bootstrap.min.css"  rel="stylesheet">
+  <link href="css/header-admin.css" rel="stylesheet">
+  <link href="css/sb-admin.css" rel="stylesheet">
+   
+
+<link href="https://fonts.googleapis.com/css?family=Lato:400,400i&amp;subset=latin-ext" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href='{% url "before_l:index" %}'><img src="img/logo-2.png"  width="140"></a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Smart Health Assessment">
+          <a class="nav-link" href='{% url "insurance:health_ana" %}'>
+            <i class="fa fa-fw fa-area-chart"></i>
+            <span class="nav-link-text">User Login Form Details</span>
+          </a>
+        </li>
+        
+         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Smart Preventive Measures">
+          <a class="nav-link" href='{% url "insurance:pre_meas" %}'>
+            <i class="fa fa-fw fa-sitemap"></i>
+            <span class="nav-link-text">Smart Preventive Measures</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Activites">
+          <a class="nav-link" href='{% url "insurance:activites" %}' >
+            <i class="fa fa-fw  fa-tasks"></i>
+            <span class="nav-link-text">Activites</span>
+          </a>
+
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Meal Plan">
+          <a class="nav-link"  href='{% url "insurance:fooddetails" %}' data-parent="#exampleAccordion">
+            <i class="fa fa-fw fa-cutlery"></i>
+            <span class="nav-link-text">Meal Plan</span>
+          </a>
+
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Appointments">
+          <a class="nav-link"  href='{% url "insurance:appointments" %}' data-parent="#exampleAccordion">
+            <i class="fa fa-fw fa-sitemap"></i>
+            <span class="nav-link-text">Appointments</span>
+          </a>
+
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Health Package">
+          <a class="nav-link"  href='{% url "old_site:cygenpacks" %}'  data-parent="#exampleAccordion">
+           <i class="fa fa-fw fa-heartbeat"></i>
+            <span class="nav-link-text">Scheduling</span>
+          </a>
+
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Insurance Plans">
+          <a class="nav-link"  href='{% url "insurance:insurance_packs" %}' data-parent="#exampleAccordion">
+            <i class="fa fa-fw fa-italic"></i>
+            <span class="nav-link-text">Payment</span>
+          </a>
+
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Hospital Packs">
+          <a class="nav-link"  href='{% url "healther:hospital_pack" %}' data-parent="#exampleAccordion">
+            <i class="fa  fa-fw fa-h-square"></i>
+            <span class="nav-link-text"></span>
+          </a>
+
+        </li>
+      </ul>
+      <ul class="navbar-nav sidenav-toggler">
+        <li class="nav-item">
+          <a class="nav-link text-center" id="sidenavToggler">
+
+          </a>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav ml-auto">
+             <li class="nav-item">
+                    <span class="username">Welcome Admin</span>
+            </li>
+                         <li>   <a  data-toggle="modal" data-target="#exampleModal" >
+                            <i class="fa fa-fw fa-sign-out"></i>Logout</a>
+                        </li>
+                    </ul>
+            </div>
+          </li>
+      </ul>
+    </div>
+</nav>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+            <a class="btn btn-primary" href='{% url "before_l:index" %}'>Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+ <div class="content-wrapper">
+     <div class="row">
+     <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="user-login">Meal Plan</div>
+     </div>
+     <div class="col-md-10 offset-md-1 col-sm-10 offset-sm-2 col-xs-12 tab">
+         <div class="row">
+        <div class= "col-md-12 col-sm-12 col-xs-12">
+            <div class="col-md-4 name-input">
+<input type="text" class="name" placeholder="Name">
+</div>
+<div class="col-md-4 email-input">
+<input type="text" class="email" placeholder="Email">
+</div>
+<div class="col-md-2 search-input">
+<button type="search" class="search" >Search</button>
+</div>
+<div class="col-md-2 delete-input">
+        <button type="search" class="delete" >Delete</button>
+        </div>
+        </div> 
+    </div>
+    <table  class="table table-striped table-bordered">
+      <thead class="head">
+          <tr>
+              <th style="width:20px"><input type="checkbox" id="checkall"></th>
+              <th style="width:30px"><strong>SNo.</strong></th>
+              <th style="width:200px"><strong>Full Name</strong></th>
+              
+              <th style="width:100px"><strong>Emailid</strong></th>
+              <th style="width:100px"><strong>Packages</strong></th>
+              <th style="width:100px"><strong>Amount</strong></th>
+             
+              <th style="width:100px"><strong>Action</strong></th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td style="width:20px"><input type="checkbox" id="checkall"></td>
+              <td style="width:30px">1</td>
+              <td style="width:200px">abcd</td>
+              
+              <td style="width:100px"> abcd@gmail.com</td>
+              <td style="width:100px"> 4</td>
+              <td style="width:100px">120$</td>
+             
+              <td style="width:100px"><img class="img-view" src="img/view.png"  alt="Delete"/><img class="img-delete" src="img/delete.png"  alt="Delete"/></td>
+          </tr>
+
+      <tbody>
+  </table>
+      
+    </div>
+</div>
+</div>
+<script src= "js/bootstrap.bundle.min.js"></script>
+
+ 
+</body>
+</html>
